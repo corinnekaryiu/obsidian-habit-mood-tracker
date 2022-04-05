@@ -2,6 +2,8 @@
 
 This guide explains my implementation of habit and mood tracking in [Obsidian](https://obsidian.md/) using daily notes, custom checkboxes and GitHub-style heatmaps or charts.
 
+![Screenshot](./images/habit-mood-tracker-demo.png)
+
 Feel free to tweak this for your own set-up. For example, you may want to display your data in a streak calendar using the [Obsidian Tracker](https://github.com/pyrochlore/obsidian-tracker) plugin.
 
 > **Note:** I'm pretty new to Obsidian and JS, so I'm sure there are simpler or more efficient ways of achieving the same results.
@@ -83,6 +85,8 @@ If you are using a custom theme, you may want to use already-defined colours and
 | Folder  | `Resources/Scripts` |
 
 #### Task Collector (TC)
+
+![Task Collector](./images/task-collector.png)
 
 Task Collector allows for right-click marking of tasks and checkboxes in preview mode. This makes it really easy to quickly log your mood and habits.
 
