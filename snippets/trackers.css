@@ -1,0 +1,160 @@
+/* This snippet has been designed for and tested on the default Obsidian theme */
+
+/* COLOuRS */
+
+body {
+  --red: red;
+  --orange: darkorange;
+  --yellow: goldenrod;
+  --green: forestgreen;
+  --blue: steelblue;
+  --dgrey: dimgrey;
+  --lgrey: silver;
+}
+
+/* HEATMAPS */
+
+/* Change background color of boxes */
+.markdown-preview-view .heatmap-calendar-boxes li {
+  background-color: var(--background-modifier-border);
+}
+
+/* CHARTS */
+
+/* Define chart colors */
+body {
+  --chart-blue: rgba(70, 130, 180, 1);
+  --chart-blue-fill: rgba(70, 130, 180, 0.25);
+  --chart-red: rgba(255, 0, 0, 1);
+  --chart-red-fill: rgba(255, 0, 0, 0.25);
+  --chart-green: rgba(34, 139, 34, 1);
+  --chart-green-fill: rgba(34, 139, 34, 0.25);
+  --chart-yellow: rgba(255, 215, 0, 1);
+  --chart-yellow-fill: rgba(255, 215, 0, 0.25);
+}
+
+/* MOOD CHECKBOXES */
+
+/* Reset checkbox appearance */
+li[data-task="1"] input[type=checkbox],
+li[data-task="2"] input[type=checkbox],
+li[data-task="3"] input[type=checkbox],
+li[data-task="4"] input[type=checkbox],
+li[data-task="5"] input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  filter: none;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+}
+
+/* Make text fainter when mood is selected */
+.markdown-reading-view li[data-task="1"],
+.markdown-reading-view li[data-task="2"],
+.markdown-reading-view li[data-task="3"],
+.markdown-reading-view li[data-task="4"],
+.markdown-reading-view li[data-task="5"] {
+  color: var(--text-faint);
+}
+
+/* Mood 1 */
+input[data-task="1"]:checked,
+li[data-task="1"] > input:checked {
+  vertical-align: text-bottom;
+  background-position: center;
+  background-size: 36%;
+  background-color: var(--red) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20256%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M256%20448c0%2017.67-14.33%2032-32%2032H32c-17.67%200-32-14.33-32-32s14.33-32%2032-32h64V123.8L49.75%20154.6C35.02%20164.5%2015.19%20160.4%205.375%20145.8C-4.422%20131.1-.4531%20111.2%2014.25%20101.4l96-64c9.828-6.547%2022.45-7.187%2032.84-1.594C153.5%2041.37%20160%2052.22%20160%2064.01v352h64C241.7%20416%20256%20430.3%20256%20448z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="1"]::after {
+  content: " Sad / Angry";
+  color: var(--red);
+}
+
+/* Mood 2 */
+input[data-task="2"]:checked,
+li[data-task="2"] > input:checked {
+  vertical-align: text-bottom;
+  background-position: center;
+  background-size: 45%;
+  background-color: var(--orange) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M320%20448c0%2017.67-14.33%2032-32%2032H32c-13.08%200-24.83-7.953-29.7-20.09c-4.859-12.12-1.859-26%207.594-35.03l193.6-185.1c31.36-30.17%2033.95-80%205.812-113.4c-14.91-17.69-35.86-28.12-58.97-29.38C127.4%2095.83%20105.3%20103.9%2088.53%20119.9L53.52%20151.7c-13.08%2011.91-33.33%2010.89-45.2-2.172C-3.563%20136.5-2.594%20116.2%2010.48%20104.3l34.45-31.3c28.67-27.34%2068.39-42.11%20108.9-39.88c40.33%202.188%2078.39%2021.16%20104.4%2052.03c49.8%2059.05%2045.2%20147.3-10.45%20200.8l-136%20130H288C305.7%20416%20320%20430.3%20320%20448z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="2"]::after {
+  content: " Anxious / Sick";
+  color: var(--orange);
+}
+
+/* Mood 3 */
+input[data-task="3"]:checked,
+li[data-task="3"] > input:checked {
+  vertical-align: text-bottom;
+  background-position: center;
+  background-size: 45%;
+  background-color: var(--yellow) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M320%20344c0%2074.98-61.02%20136-136%20136H103.6c-46.34%200-87.31-29.53-101.1-73.48c-5.594-16.77%203.484-34.88%2020.25-40.47c16.75-5.609%2034.89%203.484%2040.47%2020.25c5.922%2017.77%2022.48%2029.7%2041.23%2029.7H184c39.7%200%2072-32.3%2072-72s-32.3-72-72-72H80c-13.2%200-25.05-8.094-29.83-20.41C45.39%20239.3%2048.66%20225.3%2058.38%20216.4l131.4-120.4H32c-17.67%200-32-14.33-32-32s14.33-32%2032-32h240c13.2%200%2025.05%208.094%2029.83%2020.41c4.781%2012.3%201.516%2026.27-8.203%2035.19l-131.4%20120.4H184C258.1%20208%20320%20269%20320%20344z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="3"]::after {
+  content: " Meh";
+  color: var(--yellow);
+}
+
+/* Mood 4 */
+input[data-task="4"]:checked,
+li[data-task="4"] > input:checked {
+  vertical-align: text-bottom;
+  background-position: center;
+  background-size: 56%;
+  background-color: var(--green) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20384%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M384%20334.2c0%2017.67-14.33%2032-32%2032h-32v81.78c0%2017.67-14.33%2032-32%2032s-32-14.33-32-32v-81.78H32c-10.97%200-21.17-5.625-27.05-14.89c-5.859-9.266-6.562-20.89-1.875-30.81l128-270.2C138.6%2034.33%20157.8%2027.56%20173.7%2035.09c15.97%207.562%2022.78%2026.66%2015.22%2042.63L82.56%20302.2H256V160c0-17.67%2014.33-32%2032-32s32%2014.33%2032%2032v142.2h32C369.7%20302.2%20384%20316.6%20384%20334.2z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="4"]::after {
+  content: " Good";
+  color: var(--green);
+}
+
+/* Mood 5 */
+input[data-task="5"]:checked,
+li[data-task="5"] > input:checked {
+  vertical-align: text-bottom;
+  background-position: center;
+  background-size: 45%;
+  background-color: var(--blue) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M320%20344.6c0%2074.66-60.73%20135.4-135.4%20135.4H104.7c-46.81%200-88.22-29.83-103-74.23c-5.594-16.77%203.469-34.89%2020.23-40.48c16.83-5.625%2034.91%203.469%2040.48%2020.23c6.078%2018.23%2023.08%2030.48%2042.3%2030.48h79.95c39.36%200%2071.39-32.03%2071.39-71.39s-32.03-71.38-71.39-71.38H32c-9.484%200-18.47-4.203-24.56-11.48C1.359%20254.5-1.172%20244.9%20.5156%20235.6l32-177.2C35.27%2043.09%2048.52%2032.01%2064%2032.01l192%20.0049c17.67%200%2032%2014.33%2032%2032s-14.33%2032-32%2032H90.73L70.3%20209.2h114.3C259.3%20209.2%20320%20269.1%20320%20344.6z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="5"]::after {
+  content: " Happy";
+  color: var(--blue);
+}
+
+/* HABIT CHECKBOXES */
+
+/* Reset checkbox appearance */
+li[data-task="-"] input[type=checkbox],
+li[data-task=">"] input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  filter: none;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+}
+
+/* Cancelled or failed */
+input[data-task="-"]:checked,
+li[data-task="-"] > input:checked {
+  vertical-align: text-bottom;
+  background-position: center;
+  background-size: 70%;
+  background-color: var(--dgrey) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z'/%3E%3C/svg%3E");
+}
+
+/* Skipped or rescheduled */
+input[data-task=">"]:checked,
+li[data-task=">"] > input:checked {
+  vertical-align: text-bottom;
+  background-position: center;
+  background-size: 45%;
+  background-color: var(--lgrey) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='fill:  %23fff' viewBox='0 0 256 512'%3E%3C!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z'/%3E%3C/svg%3E");
+}

@@ -1,0 +1,164 @@
+/* This snippet has been designed for and tested on the Primary theme */
+/* https://github.com/ceciliamay/obsidianmd-theme-primary */
+
+/* COLOURS */
+
+/* Define yellow colour based on Primary theme */
+.theme-light {
+  --custom-yellow: var(--color-l-yellow-500);
+}
+.theme-dark {
+  --custom-yellow: var(--color-d-yellow-700);
+}
+
+/* Define orange colour based on Primary theme */
+.theme-light {
+  --custom-orange: var(--color-l-orange-500);
+}
+.theme-dark {
+  --custom-orange: var(--color-d-orange-500);
+}
+
+/* HEATMAPS */
+
+/* Change background color of boxes */
+.markdown-preview-view .heatmap-calendar-boxes li {
+  background-color: var(--background-secondary);
+  border: 2px solid var(--background-primary);
+  border-radius: 2px;
+}
+
+/* Hide year and days */
+.heatmap-calendar-year {
+  display: none;
+}
+.heatmap-calendar-days {
+  display: none !important;
+  grid-gap: 0 !important;
+}
+
+/* Mute month headers */
+.heatmap-calendar-months {
+  color: var(--text-muted);
+  grid-gap: 0 !important;
+  font-size: 1.125em;
+}
+
+/* Resize boxes to squares */
+.heatmap-calendar-boxes {
+  grid-template-rows: repeat(7, 14px) !important;
+  grid-gap: 0 !important;
+}
+
+/* CHARTS */
+
+/* Define chart colors */
+.theme-light {
+  --chart-blue: rgba(40, 130, 195, 1);
+  --chart-blue-fill: rgba(40, 130, 195, 0.25);
+  --chart-red: rgba(224, 58, 46, 1);
+  --chart-red-fill: rgba(224, 58, 46, 0.25);
+  --chart-green: rgba(94, 201, 155, 1);
+  --chart-green-fill: rgba(94, 201, 155, 0.25);
+  --chart-yellow: rgba(228, 174, 37, 1);
+  --chart-yellow-fill: rgba(228, 174, 37, 0.25);
+}
+.theme-dark {
+  --chart-blue: rgba(22, 116, 156, 1);
+  --chart-blue-fill: rgba(22, 116, 156, 0.25);
+  --chart-red: rgba(245, 78, 66, 1);
+  --chart-red-fill: rgba(245, 78, 66, 0.25);
+  --chart-green: rgba(56, 178, 125, 1);
+  --chart-green-fill: rgba(56, 178, 125, 0.25);
+  --chart-yellow: rgba(214, 154, 0, 1);
+  --chart-yellow-fill: rgba(214, 154, 0, 0.25);
+}
+
+/* MOOD CHECKBOXES */
+
+.markdown-reading-view li[data-task="1"],
+.markdown-reading-view li[data-task="2"],
+.markdown-reading-view li[data-task="3"],
+.markdown-reading-view li[data-task="4"],
+.markdown-reading-view li[data-task="5"] {
+  color: var(--md-color-text-muted);
+}
+
+/* Mood 1 */
+input[data-task="1"]:checked,
+li[data-task="1"] > input:checked {
+  background-position: center;
+  background-size: 39%;
+  background-color: var(--md-color-bold) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20256%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M256%20448c0%2017.67-14.33%2032-32%2032H32c-17.67%200-32-14.33-32-32s14.33-32%2032-32h64V123.8L49.75%20154.6C35.02%20164.5%2015.19%20160.4%205.375%20145.8C-4.422%20131.1-.4531%20111.2%2014.25%20101.4l96-64c9.828-6.547%2022.45-7.187%2032.84-1.594C153.5%2041.37%20160%2052.22%20160%2064.01v352h64C241.7%20416%20256%20430.3%20256%20448z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="1"]::after {
+  content: " Sad / Angry";
+  color: var(--md-color-bold);
+}
+
+/* Mood 2 */
+input[data-task="2"]:checked,
+li[data-task="2"] > input:checked {
+  background-position: center;
+  background-size: 47%;
+  background-color: var(--custom-orange) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M320%20448c0%2017.67-14.33%2032-32%2032H32c-13.08%200-24.83-7.953-29.7-20.09c-4.859-12.12-1.859-26%207.594-35.03l193.6-185.1c31.36-30.17%2033.95-80%205.812-113.4c-14.91-17.69-35.86-28.12-58.97-29.38C127.4%2095.83%20105.3%20103.9%2088.53%20119.9L53.52%20151.7c-13.08%2011.91-33.33%2010.89-45.2-2.172C-3.563%20136.5-2.594%20116.2%2010.48%20104.3l34.45-31.3c28.67-27.34%2068.39-42.11%20108.9-39.88c40.33%202.188%2078.39%2021.16%20104.4%2052.03c49.8%2059.05%2045.2%20147.3-10.45%20200.8l-136%20130H288C305.7%20416%20320%20430.3%20320%20448z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="2"]::after {
+  content: " Anxious / Sick";
+  color: var(--custom-orange);
+}
+
+/* Mood 3 */
+input[data-task="3"]:checked,
+li[data-task="3"] > input:checked {
+  background-position: center;
+  background-size: 47%;
+  background-color: var(--custom-yellow) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M320%20344c0%2074.98-61.02%20136-136%20136H103.6c-46.34%200-87.31-29.53-101.1-73.48c-5.594-16.77%203.484-34.88%2020.25-40.47c16.75-5.609%2034.89%203.484%2040.47%2020.25c5.922%2017.77%2022.48%2029.7%2041.23%2029.7H184c39.7%200%2072-32.3%2072-72s-32.3-72-72-72H80c-13.2%200-25.05-8.094-29.83-20.41C45.39%20239.3%2048.66%20225.3%2058.38%20216.4l131.4-120.4H32c-17.67%200-32-14.33-32-32s14.33-32%2032-32h240c13.2%200%2025.05%208.094%2029.83%2020.41c4.781%2012.3%201.516%2026.27-8.203%2035.19l-131.4%20120.4H184C258.1%20208%20320%20269%20320%20344z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="3"]::after {
+  content: " Meh";
+  color: var(--custom-yellow);
+}
+
+/* Mood 4 */
+input[data-task="4"]:checked,
+li[data-task="4"] > input:checked {
+  background-position: center;
+  background-size: 57%;
+  background-color: var(--interactive-success) !important;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20384%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M384%20334.2c0%2017.67-14.33%2032-32%2032h-32v81.78c0%2017.67-14.33%2032-32%2032s-32-14.33-32-32v-81.78H32c-10.97%200-21.17-5.625-27.05-14.89c-5.859-9.266-6.562-20.89-1.875-30.81l128-270.2C138.6%2034.33%20157.8%2027.56%20173.7%2035.09c15.97%207.562%2022.78%2026.66%2015.22%2042.63L82.56%20302.2H256V160c0-17.67%2014.33-32%2032-32s32%2014.33%2032%2032v142.2h32C369.7%20302.2%20384%20316.6%20384%20334.2z%22%2F%3E%3C%2Fsvg%3E");
+}
+.markdown-reading-view li[data-task="4"]::after {
+  content: " Good";
+  color: var(--interactive-success);
+}
+
+/* Mood 5 */
+input[data-task="5"]:checked,
+li[data-task="5"] > input:checked {
+  background-position: center;
+  background-size: 47%;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%23fff%22%20viewBox%3D%220%200%20320%20512%22%3E%3C!--!%20Font%20Awesome%20Pro%206.1.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20(Commercial%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M320%20344.6c0%2074.66-60.73%20135.4-135.4%20135.4H104.7c-46.81%200-88.22-29.83-103-74.23c-5.594-16.77%203.469-34.89%2020.23-40.48c16.83-5.625%2034.91%203.469%2040.48%2020.23c6.078%2018.23%2023.08%2030.48%2042.3%2030.48h79.95c39.36%200%2071.39-32.03%2071.39-71.39s-32.03-71.38-71.39-71.38H32c-9.484%200-18.47-4.203-24.56-11.48C1.359%20254.5-1.172%20244.9%20.5156%20235.6l32-177.2C35.27%2043.09%2048.52%2032.01%2064%2032.01l192%20.0049c17.67%200%2032%2014.33%2032%2032s-14.33%2032-32%2032H90.73L70.3%20209.2h114.3C259.3%20209.2%20320%20269.1%20320%20344.6z%22%2F%3E%3C%2Fsvg%3E");
+}
+.theme-light input[data-task="5"]:checked,
+.theme-light li[data-task="5"] > input:checked {
+  background-color: var(--color-l-blue-500);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.theme-dark input[data-task="5"]:checked,
+.theme-dark li[data-task="5"] > input:checked {
+  background-color: var(--color-d-blue-900);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.markdown-reading-view li[data-task="5"]::after {
+  content: " Happy";
+}
+.theme-light .markdown-reading-view li[data-task="5"]::after {
+  color: var(--color-l-blue-500);
+}
+.theme-dark .markdown-reading-view li[data-task="5"]::after {
+  color: var(--color-d-blue-900);
+}
