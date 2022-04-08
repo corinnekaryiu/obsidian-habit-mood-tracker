@@ -17,7 +17,7 @@ Feel free to tweak this for your own set-up. For example, you may want to displa
 
 #### Community Plugins
 
-- **[Dataview](https://github.com/blacksmithgu/obsidian-dataview) >= beta v.0.5.0** - *required* - queries information and populate tracker
+- **[Dataview](https://github.com/blacksmithgu/obsidian-dataview) >= beta v.0.5.0** - *required* - queries information and populates tracker
 - **[Heatmap Calendar](https://github.com/Richardsl/heatmap-calendar-obsidian)** - *required* - displays tracked information in a heatmap
 - **[Obsidian Charts](https://github.com/phibr0/obsidian-charts)** - *required* - displays tracked information in an interactive chart
 - **[Custom JS](https://github.com/samlewis0602/obsidian-custom-js)** - *recommended* - simplifies codeblocks with reusable scripts and variables
