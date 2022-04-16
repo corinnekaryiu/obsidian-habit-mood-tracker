@@ -24,8 +24,8 @@
 /* Change background color of boxes */
 .markdown-preview-view .heatmap-calendar-boxes li {
   background-color: var(--background-secondary);
-  border: 2px solid var(--background-primary);
-  border-radius: 2px;
+  border: 1px solid var(--background-primary);
+  border-radius: 3px;
 }
 
 /* Hide year and days */
@@ -37,14 +37,14 @@
   grid-gap: 0 !important;
 }
 
-/* Mute month headers */
+/* Change months fonts */
 .heatmap-calendar-months {
   color: var(--text-muted);
   grid-gap: 0 !important;
   font-size: 1.125em;
 }
 
-/* Resize boxes to squares */
+/* Resize boxes */
 .heatmap-calendar-boxes {
   grid-template-rows: repeat(7, 14px) !important;
   grid-gap: 0 !important;
