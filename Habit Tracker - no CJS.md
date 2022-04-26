@@ -19,7 +19,7 @@ const calendarData = {
     entries: []
 }
 
-for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Exercise"))){
+for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Exercise"))){
     calendarData.entries.push({
         date: page.path.split("/").pop().replace(".md", ""),
 		color: page.status,
@@ -45,7 +45,7 @@ const calendarData = {
     entries: []
 }
 
-for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Read"))){
+for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Read"))){
     calendarData.entries.push({
         date: page.path.split("/").pop().replace(".md", ""),
 		color: page.status,
@@ -71,7 +71,7 @@ const calendarData = {
     entries: []
 }
 
-for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Study"))){
+for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Study"))){
     calendarData.entries.push({
         date: page.path.split("/").pop().replace(".md", ""),
 		color: page.status,
@@ -100,7 +100,7 @@ const calendarData = {
     entries: []
 }
 
-for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(p=>String(p.section).includes("Vices")).where(p=>p.text.includes("Alcohol"))){
+for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Vices")).where(p=>p.text.includes("Alcohol"))){
     calendarData.entries.push({
         date: page.path.split("/").pop().replace(".md", ""),
 		color: page.status,

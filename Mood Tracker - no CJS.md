@@ -20,7 +20,7 @@ const calendarData = {
     entries: []
 }
 
-for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(p=>p.text.includes("Mood")).sort(p=>p.path)){
+for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>p.text.includes("Mood")).sort(p=>p.path)){
     calendarData.entries.push({
         date: page.path.split("/").pop().replace(".md", ""),
 		color: page.status,
@@ -36,7 +36,7 @@ renderHeatmapCalendar(this.container, calendarData)
 
 ```dataviewjs
 
-const pages = dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(b=>b.text.includes("Mood")).sort(p=>p.path)
+const pages = dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(b=>b.text.includes("Mood")).sort(p=>p.path)
 const labels = pages.map(b=>b.path.split("/").pop().replace(".md", ""))
 const mood = pages.map(b=>b.status)
 

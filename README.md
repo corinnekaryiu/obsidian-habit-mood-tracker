@@ -151,7 +151,7 @@ const calendarData = {
     entries: []
 }
 
-for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(p=>p.text.includes("Mood")).sort(p=>p.path)){
+for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>p.text.includes("Mood")).sort(p=>p.path)){
     calendarData.entries.push({
         date: Heatmaps.fileDate(page.path),
 		color: page.status,
@@ -168,7 +168,7 @@ renderHeatmapCalendar(this.container, calendarData)
 ```dataviewjs
 const {Charts} = customJS
 
-const pages = dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(b=>b.text.includes("Mood")).sort(p=>p.path)
+const pages = dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(b=>b.text.includes("Mood")).sort(p=>p.path)
 const labels = pages.map(b=>Charts.fileDate(b.path))
 const mood = pages.map(b=>b.status)
 
@@ -259,7 +259,7 @@ const calendarData = {
     entries: []
 }
 
-for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.completed).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Exercise"))){
+for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Exercise"))){
     calendarData.entries.push({
         date: Heatmaps.fileDate(page.path),
 		color: page.status,
