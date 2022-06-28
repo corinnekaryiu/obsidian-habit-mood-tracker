@@ -19,7 +19,7 @@ const calendarData = {
 	},
 	intensityScaleStart: 1,
 	intensityScaleEnd: 5,
-  entries: []
+	entries: []
 }
 
 for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>p.text.includes("Mood")).sort(p=>p.path)){
