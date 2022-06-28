@@ -16,7 +16,9 @@ const calendarData = {
 		"-": ["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"],
 		">": ["#696969", "#696969", "#696969", "#696969", "#696969"]
 	},
-    entries: []
+	intensityScaleStart: 1,
+	intensityScaleEnd: 5,
+  entries: []
 }
 
 for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Exercise"))){
@@ -42,7 +44,9 @@ const calendarData = {
 		"-": ["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"],
 		">": ["#696969", "#696969", "#696969", "#696969", "#696969"]
 	},
-    entries: []
+	intensityScaleStart: 1,
+	intensityScaleEnd: 5,
+  entries: []
 }
 
 for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Read"))){
@@ -68,7 +72,9 @@ const calendarData = {
 		"-": ["#FF0000", "#FF0000", "#FF0000", "#FF0000", "#FF0000"],
 		">": ["#696969", "#696969", "#696969", "#696969", "#696969"]
 	},
-    entries: []
+	intensityScaleStart: 1,
+	intensityScaleEnd: 5,
+  entries: []
 }
 
 for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Study"))){
@@ -97,7 +103,9 @@ const calendarData = {
 		"-": ["#228B22", "#228B22", "#228B22", "#228B22", "#228B22"],
 		">": ["#696969", "#696969", "#696969", "#696969", "#696969"]
 	},
-    entries: []
+	intensityScaleStart: 1,
+	intensityScaleEnd: 5,
+  entries: []
 }
 
 for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Vices")).where(p=>p.text.includes("Alcohol"))){

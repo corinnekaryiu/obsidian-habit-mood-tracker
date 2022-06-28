@@ -19,7 +19,9 @@ const calendarData = {
 		4: Heatmaps.entryColor('green'),
 		5: Heatmaps.entryColor('blue'),
 	},
-    entries: []
+	intensityScaleStart: 1,
+	intensityScaleEnd: 5,
+  entries: []
 }
 
 for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>p.text.includes("Mood")).sort(p=>p.path)){

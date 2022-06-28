@@ -74,7 +74,9 @@ const calendarData = {
 		"-": Heatmaps.entryColor('red'),
 		">": Heatmaps.entryColor('faint')
 	},
-    entries: []
+	intensityScaleStart: 1,
+	intensityScaleEnd: 5,
+  entries: []
 }
 
 for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Habits")).where(p=>p.text.includes("Study"))){
@@ -105,7 +107,9 @@ const calendarData = {
 		"-": Heatmaps.entryColor('green'),
 		">": Heatmaps.entryColor('faint')
 	},
-    entries: []
+	intensityScaleStart: 1,
+	intensityScaleEnd: 5,
+  entries: []
 }
 
 for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p=>String(p.section).includes("Vices")).where(p=>p.text.includes("Alcohol"))){
