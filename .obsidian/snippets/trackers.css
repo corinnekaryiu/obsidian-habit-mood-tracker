@@ -15,7 +15,7 @@ body {
 /* HEATMAPS */
 
 /* Change background color of boxes */
-.markdown-preview-view .heatmap-calendar-boxes li {
+.markdown-preview-view .heatmap-calendar-boxes .isEmpty {
   background-color: var(--background-modifier-border);
 }
 
