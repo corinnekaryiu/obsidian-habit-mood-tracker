@@ -26,7 +26,8 @@ for(let page of dv.pages('"Daily Notes"').file.tasks.where(p=>p.checked).where(p
     calendarData.entries.push({
         date: page.path.split("/").pop().replace(".md", ""),
 		color: page.status,
-		intensity: 5
+		intensity: 5,
+		content: await dv.span(`[[${page.path}|]]`)
     })
 }
 	

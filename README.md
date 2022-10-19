@@ -281,7 +281,6 @@ If you would prefer not to use Custom JS, take a look at the example provided in
 There are a few things I'm looking to add for my personal use-case, such as:
 
 - Bar chart showing number of habits or vices completed each day
-- Heatmap hyperlinks back to daily notes
 - Chart gradient colours aligned to mood colour
 
 If you have any tips on how to achieve any of the above, please let me know.
